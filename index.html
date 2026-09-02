@@ -1,63 +1,25 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Master Set Pokémon TCG de Gabriel." />
-    <title>Gabriel's Master Set | Pokémon TCG</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="#top"><span>◒</span> Gabriel's <b>Master Set</b></a>
-      <a class="contact-link" href="mailto:SEU_EMAIL_AQUI?subject=Contato%20sobre%20o%20Master%20Set">✉ Contato</a>
-    </header>
-    <main id="top" class="page-shell">
-      <section class="hero">
-        <p class="eyebrow">Coleção pessoal · Pokémon TCG</p>
-        <h1>Meu <em>Master Set.</em></h1>
-        <p>Uma vitrine pública da minha coleção física, atualizada conforme novas cartas entram no álbum.</p>
-        <div class="stats">
-          <span><b id="card-count">—</b> cartas registradas</span>
-          <span><b id="collection-value">—</b> valor estimado</span>
-          <span><b id="updated-at">—</b> última atualização</span>
-        </div>
-      </section>
-
-      <section class="collection" aria-labelledby="collection-title">
-        <div class="collection-heading">
-          <div><p class="eyebrow">Álbum aberto</p><h2 id="collection-title">Cartas da coleção</h2></div>
-          <div class="filters">
-            <label><span class="sr-only">Pesquisar</span><input id="search" type="search" placeholder="Buscar carta ou Pokémon…" /></label>
-            <label><span class="sr-only">Filtrar por região</span><select id="region-filter"><option value="all">Todas as regiões</option><option value="kanto">Kanto</option><option value="johto">Johto</option><option value="hoenn">Hoenn</option><option value="sinnoh">Sinnoh</option><option value="unova">Unova</option><option value="kalos">Kalos</option><option value="alola">Alola</option><option value="galar">Galar</option><option value="paldea">Paldea</option></select></label>
-          </div>
-        </div>
-        <p id="result-count" class="result-count">Carregando coleção…</p>
-        <div id="grid" class="card-grid" aria-live="polite"></div>
-      </section>
-
-      <aside class="ad-space" aria-label="Espaço reservado para anúncio">
-        <small>PUBLICIDADE</small>
-        <strong>Espaço reservado para anúncio</strong>
-        <span>Os anúncios serão exibidos aqui após a aprovação do Google AdSense.</span>
-      </aside>
-
-      <section class="contact-section" id="contato">
-        <p class="eyebrow">Fale comigo</p>
-        <h2>Curtiu a coleção?</h2>
-        <p>Para dúvidas, propostas ou troca de ideias sobre Pokémon TCG, envie uma mensagem.</p>
-        <a class="contact-button" href="mailto:SEU_EMAIL_AQUI?subject=Contato%20sobre%20o%20Master%20Set">Enviar e-mail →</a>
-      </section>
-    </main>
-    <dialog id="card-modal" class="card-modal">
-      <button id="close-modal" class="close-modal" type="button" aria-label="Fechar">×</button>
-      <img id="modal-image" alt="" />
-      <div><p id="modal-index" class="eyebrow"></p><h2 id="modal-name"></h2><p id="modal-set"></p><strong id="modal-price"></strong><a id="modal-liga" target="_blank" rel="noopener">Ver na Liga Pokémon ↗</a></div>
-    </dialog>
-    <footer>© <span id="year"></span> Gabriel's Master Set · Pokémon e Pokémon TCG são marcas de seus respectivos proprietários.</footer>
-    <script src="js/app.js"></script>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Master Set do Casas — Pokédex pública Pokémon TCG.">
+  <title>Master Set do Casas | Pokémon TCG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#top"><i class="pokeball"></i><span>Master Set do <b>Casas</b></span></a><a class="contact" href="mailto:SEU_EMAIL_AQUI?subject=Contato%20sobre%20o%20Master%20Set">✉ Contato</a></header>
+  <main id="top" class="page-shell">
+    <section class="hero"><div><p class="eyebrow">Pokédex Nacional · Coleção física</p><h1>Master Set<br>do <em>Casas.</em></h1><p>Minha jornada pela Pokédex completa. Cada Pokémon registrado revela a carta física escolhida para a coleção.</p></div><div class="progress-card"><small>PROGRESSO ATUAL</small><strong id="progress">—</strong><span>Pokémon registrados</span><i><b id="progress-bar"></b></i></div><div class="stats"><span><small>CARTAS REGISTRADAS</small><b id="card-count">—</b></span><span><small>VALOR ESTIMADO</small><b id="collection-value">—</b></span><span><small>ATUALIZADO EM</small><b id="updated-at">—</b></span></div></section>
+    <section class="catalog-layout" aria-labelledby="catalog-title">
+      <aside class="ad-rail"><small>PUBLICIDADE</small><strong>Anúncio</strong><span>Espaço reservado para<br>Google AdSense</span></aside>
+      <section class="catalog"><div class="catalog-heading"><div><p class="eyebrow">Álbum aberto</p><h2 id="catalog-title">Pokédex Nacional</h2><p id="result-count">Carregando Pokédex…</p></div><div class="filters"><input id="search" type="search" placeholder="Buscar Pokémon ou carta…" autocomplete="off"><select id="region-filter" aria-label="Filtrar por região"><option value="all">Todas as regiões</option><option value="kanto">Kanto</option><option value="johto">Johto</option><option value="hoenn">Hoenn</option><option value="sinnoh">Sinnoh</option><option value="unova">Unova</option><option value="kalos">Kalos</option><option value="alola">Alola</option><option value="galar">Galar</option><option value="paldea">Paldea</option></select><button id="only-owned" type="button" aria-pressed="false">Só com carta</button></div></div><div id="grid" class="pokemon-grid" aria-live="polite"></div><button id="load-more" class="load-more" type="button" hidden>Mostrar mais Pokémon</button></section>
+      <aside class="ad-rail"><small>PUBLICIDADE</small><strong>Anúncio</strong><span>Espaço reservado para<br>Google AdSense</span></aside>
+    </section>
+    <section class="contact-section"><p class="eyebrow">Fale comigo</p><h2>Curtiu a coleção?</h2><p>Para dúvidas, propostas ou conversa sobre Pokémon TCG, envie uma mensagem.</p><a href="mailto:SEU_EMAIL_AQUI?subject=Contato%20sobre%20o%20Master%20Set">Enviar e-mail →</a></section>
+  </main>
+  <dialog id="pokemon-modal" class="pokemon-modal"><button id="close-modal" type="button" aria-label="Fechar">×</button><img id="modal-image" alt=""><div><p id="modal-number" class="eyebrow"></p><h2 id="modal-name"></h2><p id="modal-details"></p><strong id="modal-price"></strong><a id="modal-liga" target="_blank" rel="noopener" hidden>Ver na Liga Pokémon ↗</a></div></dialog>
+  <footer>© <span id="year"></span> Master Set do Casas · Pokémon e Pokémon TCG são marcas de seus respectivos proprietários.</footer>
+  <script src="js/app.js"></script>
+</body></html>

@@ -1,6 +1,6 @@
-# Gabriel's Master Set
+# Master Set do Casas
 
-Vitrine pública, somente leitura, da coleção física. O arquivo `collection.json` é uma cópia do backup exportado pelo CardDex.
+Vitrine pública, somente leitura, da coleção física. Ela mostra a Pokédex Nacional completa e troca a arte oficial pela carta TCG quando o Pokémon está registrado. O arquivo `collection.json` é uma cópia do backup exportado pelo CardDex.
 
 ## Como publicar no GitHub Pages
 
